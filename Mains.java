@@ -4,5 +4,9 @@ public class Mains {
 		SearchGUI se = new SearchGUI();
 		SearchGUI.btn.addActionListener(se);
 		
+		CustSigIn cl = new CustSigIn();
+		CustSigIn.Login.addActionListener(cl);
+		CustSigIn.NewUser.addActionListener(cl);
+		
 	}
 }
