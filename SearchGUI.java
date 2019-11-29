@@ -51,8 +51,8 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	
 	// adding panel to frame, and frame sizing
 	frame.add(pan);
-    frame.setSize(400, 400); 
-    frame.setLocation (350, 100);
+    frame.setSize(500,500); 
+    frame.setLocation (450, 100);
     frame.setVisible(true); 
 	}
 	
