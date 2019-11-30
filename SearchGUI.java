@@ -18,6 +18,8 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	static JLabel results2 = new JLabel("");
 	static JLabel results3 = new JLabel("");
 	static JLabel comment = new JLabel();
+	static JLabel empty = new JLabel("");
+	static JLabel CurrDate = new JLabel(Mains.date);
 	public static String search_input;
 
 	SearchGUI(){
@@ -28,6 +30,7 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	pan.setLayout(new GridBagLayout());
 	GridBagConstraints gbc = new GridBagConstraints();
 	GridBagConstraints c = new GridBagConstraints();
+
 	
 	gbc.gridwidth = GridBagConstraints.REMAINDER; //used to create new line 
 	
@@ -48,11 +51,18 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	c.insets = new Insets(10,0,0,0);
 	pan.add(space,c);
 	pan.add(comment,c);
+	//empty.setFont(new Font("Serif", Font.PLAIN, 100)); //font
+	pan.add(empty,gbc);
+	GridBagConstraints q = new GridBagConstraints();
+	q.gridx = 2;
+	q.anchor = GridBagConstraints.LAST_LINE_END;
+	q.insets = new Insets(150, 0, 0, 0);
+	pan.add(CurrDate,q);
 	
 	// adding panel to frame, and frame sizing
 	frame.add(pan);
     frame.setSize(500,500); 
-    frame.setLocation (450, 100);
+    frame.setLocation (315, 100);
     frame.setVisible(true); 
 	}
 	
@@ -71,7 +81,7 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	        	//printing the variable (Used for testing, will remove later)
 	        	space.setText(search_input);
 	        	
-	        	comment.setText(": Will be used as a variable. (search_input for now)");
+	        	comment.setText(": Will be used as a variable. (search_input for now)(String)");
 	  
 	            // set the text of field to blank 
 	            search.setText("  "); 
