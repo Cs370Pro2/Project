@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -18,6 +19,7 @@ public class CustSigIn  extends JFrame implements ActionListener{
 	static JLabel Header = new JLabel("Customer Login:");
 	static JLabel TestOutputU = new JLabel ("User:");
 	static JLabel TestOutputP = new JLabel ("Pass:");
+	static JLabel CurrDate = new JLabel(Mains.date);
 	public static String User;
 	public static String Pass;
 	
@@ -44,9 +46,15 @@ public class CustSigIn  extends JFrame implements ActionListener{
 		pan.add(NewUser,gbc);
 		pan.add(TestOutputU,c);
 		pan.add(TestOutputP,c);
+		
+		GridBagConstraints q = new GridBagConstraints();
+		q.gridx = 2;
+		q.anchor = GridBagConstraints.LAST_LINE_END;
+		q.insets = new Insets(30, 0, 0, 0);
+		pan.add(CurrDate,q);
 		CustLog.add(pan);
-	    CustLog.setSize(325,325); 
-	    CustLog.setLocation (100, 100);
+	    CustLog.setSize(325,300); 
+	    CustLog.setLocation (0, 100);
 	    CustLog.setVisible(true); 
 		
 		
@@ -70,4 +78,4 @@ public class CustSigIn  extends JFrame implements ActionListener{
 		}
 		
 	}//end of actionpreformed
-}
+}//end of class
