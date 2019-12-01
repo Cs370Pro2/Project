@@ -55,10 +55,7 @@ public class CustSigIn  extends JFrame implements ActionListener{
 		CustLog.add(pan);
 	    CustLog.setSize(325,300); 
 	    CustLog.setLocation (0, 100);
-	    CustLog.setVisible(true); 
-		
-		
-		
+	    CustLog.setVisible(true); 	
 		
 	} //end of CustSigIn
 	
@@ -74,7 +71,9 @@ public class CustSigIn  extends JFrame implements ActionListener{
 		}
 		if(s.equals("Create Account")) {
 			// runs the "Create User Gui"
-			
+			CustNewGUI cn = new CustNewGUI();
+			CustNewGUI.Create.addActionListener(cn);
+			CustLog.dispose();		
 		}
 		
 	}//end of actionpreformed
