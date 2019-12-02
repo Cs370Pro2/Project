@@ -32,7 +32,7 @@ public class HummingDartGUI extends JFrame implements ActionListener{
 		gbc.gridwidth = GridBagConstraints.REMAINDER;
 		gbc.insets = new Insets(10, 0, 0, 0);
 		airlabel.setFont(new Font("Serif", Font.PLAIN, 30));
-		airlabel.setForeground(Color.RED);
+		airlabel.setForeground(Color.CYAN);
 		pan.add(airlabel,gbc);
 		pan.add(flight1,gbc);
 		if(Mains.isadmin == true) pan.add(cancelflight1,gbc);
