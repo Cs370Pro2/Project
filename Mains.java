@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class Mains {
 	public static String month,day,year,date;
 	public static int intmonth,intday,intyear;
-	public static boolean isadmin = false;
+	public static boolean isadmin = true;
 //	public static String date = "11/29/2019";
 	public static void main(String args[]) {
 		month = JOptionPane.showInputDialog("Input month:");
@@ -22,6 +22,9 @@ public class Mains {
 		//Opens Search Engine
 		SearchGUI se = new SearchGUI();
 		SearchGUI.btn.addActionListener(se);
+		SearchGUI.reserve1.addActionListener(se);
+		SearchGUI.reserve2.addActionListener(se);
+		SearchGUI.reserve3.addActionListener(se);
 		
 		//Opens FlightRaid GUI
 		FlightRaidGUI fr = new FlightRaidGUI();
