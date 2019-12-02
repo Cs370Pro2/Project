@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
@@ -9,7 +8,7 @@ import java.awt.event.*;
 
 public class SearchGUI  extends JFrame implements ActionListener {
 	static JTextField search = new JTextField(30);
-	static JFrame frame = new JFrame("Test Name"); 
+	static JFrame frame = new JFrame("Search Engine"); 
 	static JButton btn = new JButton("Search");
 	static JLabel Lab = new JLabel("This is where results will be displayed");
 	static JLabel label = new JLabel("Search for Flight:");
@@ -36,7 +35,7 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	
 	label.setFont(new Font("Serif", Font.PLAIN, 30)); //font for the "Search for Flight" text
 	
-	//add to panel
+	//adds Text Fields, Buttons, and Labels to GUI
 	pan.add(label,gbc);
 	pan.add(search,gbc);
 	gbc.insets = new Insets(10, 0, 0, 0); //spacing
@@ -46,7 +45,6 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	pan.add(results1,gbc);
 	pan.add(results2,gbc);
 	pan.add(results3,gbc);
-	
 	space.setForeground(Color.RED); //changing the input text to red
 	c.insets = new Insets(10,0,0,0);
 	pan.add(space,c);
@@ -62,7 +60,7 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	// adding panel to frame, and frame sizing
 	frame.add(pan);
     frame.setSize(500,500); 
-    frame.setLocation (315, 100);
+    frame.setLocation (250, 80);
     frame.setVisible(true); 
 	}
 	
