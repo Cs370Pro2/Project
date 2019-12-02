@@ -16,6 +16,9 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	static JLabel results1 = new JLabel("");
 	static JLabel results2 = new JLabel("");
 	static JLabel results3 = new JLabel("");
+	static JButton reserve1 = new JButton("Reserve Flight1");
+	static JButton reserve2 = new JButton("Reserve Flight2");
+	static JButton reserve3 = new JButton("Reserve Flight3");
 	static JLabel comment = new JLabel();
 	static JLabel empty = new JLabel("");
 	static JLabel CurrDate = new JLabel(Mains.date);
@@ -42,9 +45,20 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	pan.add(btn,gbc);
 	pan.add(Lab,gbc);
 	gbc.insets = new Insets(5, 0, 0, 0);
+	//result 1
 	pan.add(results1,gbc);
+	pan.add(reserve1,gbc);
+	reserve1.setVisible(false);
+
+	//result 2
 	pan.add(results2,gbc);
+	pan.add(reserve2,gbc);
+	reserve2.setVisible(false);
+	//result 3
 	pan.add(results3,gbc);
+	pan.add(reserve3,gbc);
+	reserve3.setVisible(false);
+	
 	space.setForeground(Color.RED); //changing the input text to red
 	c.insets = new Insets(10,0,0,0);
 	pan.add(space,c);
@@ -59,7 +73,7 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	
 	// adding panel to frame, and frame sizing
 	frame.add(pan);
-    frame.setSize(500,500); 
+    frame.setSize(550,575); 
     frame.setLocation (250, 80);
     frame.setVisible(true); 
 	}
@@ -73,8 +87,14 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	        	
 	        	//displays results when button is clicked (Will change later)
 	        	results1.setText("*Display first result*");
+	        	reserve1.setVisible(true);
+	        	//reserve1.setText("Reserve Flight1");
 	        	results2.setText("*Display second result*");
+	        	reserve2.setVisible(true);
+	        	//reserve2.setText("Reserve Flight2");
 	        	results3.setText("*Display third result*");
+	        	reserve3.setVisible(true);
+	        	//reserve3.setText("Reserve Flight3");
 	        	
 	        	//printing the variable (Used for testing, will remove later)
 	        	space.setText(search_input);
@@ -85,7 +105,19 @@ public class SearchGUI  extends JFrame implements ActionListener {
 	            search.setText("  "); 
 	            
 	        }//end of if statement (if search button is clicked)
+	        
+			if(s.equals("Reserve Flight1")) {
+				
+			}// end of Flight1
 
+			if(s.equals("Reserve Flight2")) {
+				
+			}// end of Flight2
+			
+			if(s.equals("Reserve Flight3")) {
+				
+			}// end of Flight3
+			
 	}// end of action listener
 	
 }//end of class
