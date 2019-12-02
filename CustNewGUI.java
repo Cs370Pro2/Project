@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -28,6 +29,8 @@ public class CustNewGUI extends JFrame implements ActionListener {
 	
 	
 	CustNewGUI(){
+		
+		//adds Text Fields, Buttons, and Labels to GUI
 		JPanel pan = new JPanel();
 		pan.setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
@@ -48,22 +51,16 @@ public class CustNewGUI extends JFrame implements ActionListener {
 		gbc.gridx = 1;
 		pan.add(TestOutputU,c);
 		pan.add(TestOutputP,c);
-		
 		GridBagConstraints q = new GridBagConstraints();
 		q.gridx = 2;
 		q.anchor = GridBagConstraints.LAST_LINE_END;
 		q.insets = new Insets(50, 0, 0, 0);
 		pan.add(CurrDate,q);
-		
 		NewCustGui.add(pan);
 		NewCustGui.setSize(325,325); 
 		NewCustGui.setLocation (805, 100);
 		NewCustGui.setVisible(true); 
-		
-		
-		
 	
-		
 	}//end of CustNewGUI
 
 	
@@ -74,6 +71,12 @@ public class CustNewGUI extends JFrame implements ActionListener {
 			Pass = PassInput.getText();
 			TestOutputU.setText("Username: " + User);
 			TestOutputP.setText("Password: " + Pass);
+			JOptionPane.showMessageDialog(null, "Account Created.");
+			NewCustGui.dispose();
+			CustSigIn cf = new CustSigIn();
+			CustSigIn.Login.addActionListener(cf);
+			CustSigIn.NewUser.addActionListener(cf);
+			
 			//User and Pass is used for variables
 		}// end of if 
 
