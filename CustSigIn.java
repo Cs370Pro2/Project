@@ -36,6 +36,8 @@ public class CustSigIn  extends JFrame implements ActionListener{
 		Header.setForeground(Color.RED);
 		CustLog.setBackground(Color.CYAN);
 		c.gridx = 1;
+		
+		//adds Text Fields, Buttons, and Labels to GUI
 		pan.add(Header,gbc);
 		pan.add(Userlab);
 		pan.add(UserInput,gbc);
@@ -54,7 +56,7 @@ public class CustSigIn  extends JFrame implements ActionListener{
 		pan.add(CurrDate,q);
 		CustLog.add(pan);
 	    CustLog.setSize(325,300); 
-	    CustLog.setLocation (0, 100);
+	    CustLog.setLocation (0, 60);
 	    CustLog.setVisible(true); 	
 		
 	} //end of CustSigIn
