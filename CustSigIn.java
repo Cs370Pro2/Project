@@ -55,7 +55,7 @@ public class CustSigIn  extends JFrame implements ActionListener{
 		q.insets = new Insets(30, 0, 0, 0);
 		pan.add(CurrDate,q);
 		CustLog.add(pan);
-	    CustLog.setSize(325,300); 
+	    CustLog.setSize(400,325); 
 	    CustLog.setLocation (0, 60);
 	    CustLog.setVisible(true); 	
 		
