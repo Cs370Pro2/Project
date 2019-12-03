@@ -32,7 +32,7 @@ public class HummingDartGUI extends JFrame implements ActionListener{
 		gbc.gridwidth = GridBagConstraints.REMAINDER;
 		gbc.insets = new Insets(10, 0, 0, 0);
 		airlabel.setFont(new Font("Serif", Font.PLAIN, 30));
-		airlabel.setForeground(Color.CYAN);
+		airlabel.setForeground(Color.BLUE);
 		pan.add(airlabel,gbc);
 		pan.add(flight1,gbc);
 		if(Mains.isadmin == true) pan.add(cancelflight1,gbc);
@@ -63,20 +63,41 @@ public class HummingDartGUI extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		String s = e.getActionCommand();
 		if(s.equals("Cancel Flight1")) {
+			int Flight1in = JOptionPane.showConfirmDialog(null, "Are you sure you want to cancel this flight?");
+	        // 0=yes, 1=no, 2=cancel
 			
 		}// end of Flight1
 		
 		if(s.equals("Cancel Flight2")) {
+			int Flight2in = JOptionPane.showConfirmDialog(null, "Are you sure you want to cancel this flight?");
+	        // 0=yes, 1=no, 2=cancel
 			
 		}// end of Flight2
 		
 		if(s.equals("Cancel Flight3")) {
+			int Flight3in = JOptionPane.showConfirmDialog(null, "Are you sure you want to cancel this flight?");
+	        // 0=yes, 1=no, 2=cancel
 			
 		}// end of Flight3
 		
 		if(s.equals("Insert Addtional Flight:")) {
-			
-		}// end of Insert
+			String airline = JOptionPane.showInputDialog("Which airport is this flight leaving from?\n"
+					+ "1. Airport1\n"
+					+ "2. Airport2\n"
+					+ "3. Airport3\n"
+					+ "Enter a number from 1-3.");
+		}// end of Insert Flight
+		
+		if(s.equals("Insert Addtional Fare:")) {
+			String flightoption = JOptionPane.showInputDialog("What flight are you adding this fare to?\n"
+					+ "1. Flight1\n"
+					+ "2. Flight2\n"
+					+ "3. Flight3\n"
+					+ "Enter a number from 1-3.");
+			int intflight = Integer.parseInt(flightoption);
+			String fare = JOptionPane.showInputDialog("What will the new fare be?");
+			int intfare = Integer.parseInt(fare);		
+		}// end of Insert Fare
 
 	
 	}//end of actionpreformed
