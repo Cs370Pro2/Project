@@ -25,6 +25,9 @@ public class Mains {
 		SearchGUI.reserve1.addActionListener(se);
 		SearchGUI.reserve2.addActionListener(se);
 		SearchGUI.reserve3.addActionListener(se);
+		SearchGUI.reserveinfo1.addActionListener(se);
+		SearchGUI.reserveinfo2.addActionListener(se);
+		SearchGUI.reserveinfo3.addActionListener(se);
 		
 		//Opens FlightRaid GUI
 		FlightRaidGUI fr = new FlightRaidGUI();
